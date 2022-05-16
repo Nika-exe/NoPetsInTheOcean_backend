@@ -1,2 +1,10 @@
-com\webapp\Hackathon\JakartaRestConfiguration.class
-com\webapp\Hackathon\resources\JakartaEE9Resource.class
+com\modelo\beans\SolicitudAdopcion.class
+com\notificaciones\control\Notificacion.class
+com\notificaciones\control\PlantillaNotificacionesControl.class
+com\webapp\servlets\FormularioAdopcionService.class
+com\notificaciones\control\NotificacionesControl$1.class
+com\modelo\beans\SolicitudDenuncia.class
+com\modelo\beans\DireccionDenuncias.class
+com\notificaciones\control\NotificacionesControl$2.class
+com\notificaciones\control\NotificacionesControl.class
+com\webapp\servlets\FormularioDenunciaService.class

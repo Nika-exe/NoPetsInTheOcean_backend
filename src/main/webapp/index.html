@@ -1,10 +1,107 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Start Page</title>
+        <title>TEST</title>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <script src="js/jquery-3.6.0.min.js"></script>
     </head>
     <body>
-        <h1>Hello World!</h1>
+        <h1>No pets in the Ocean</h1>
     </body>
+
+    <form id="formularioAdopcion" action="" method="get">
+        <input type="text" name="nombre" value="Raul Barragan">
+        <input type="text" name="email" value="correo@hotmail.com">
+        <input type="text" name="telefono" value="5555555">
+        <input type="text" name="especieMascota" value="Tortuga de Orejas Rojas">
+        <input type="text" name="motivoCausa" value="Se me complica continuar con los cuidados de mi tortuga...">
+        <input type="button" id="bAdopcionformulario" value="Formulario Adopcion">
+    </form>
+    
+    <form id="formularioDenuncia" action="./FormularioAdopcion" method="get">
+        <input type="text" name="descripcionHecho" value="Hay unas tortugas en la presa">
+        <input type="text" name="avenida" value="una avenida ">
+        <input type="text" name="ciudad" value="Mexico">
+        <input type="text" name="estado" value="Mexico">
+        <input type="text" name="cp" value="54234">
+        <input type="text" name="referencia" value="Enfrente de un parque de basketball">
+        <input type="button" id="bDenunciaFormulario" value="Formulario Denuncia">
+    </form>
+</body>
 </html>
+
+
+<script>
+    $('#bAdopcionformulario').click(function (e) {
+        $.ajax({
+            type: $('#formularioAdopcion').attr('method'),
+            url: './FormularioAdopcion',
+            data: $('#formularioAdopcion').serialize(),
+            success: function (response) {
+                alert("funciona bien");
+            }
+//            ,
+//            error: function(error){
+//                alert("No funciona");
+//            }
+        });
+    });
+    
+    $('#bDenunciaFormulario').click(function (e) {
+        $.ajax({
+            type: $('#formularioDenuncia').attr('method'),
+            url: './FormularioDenuncia',
+            data: $('#formularioDenuncia').serialize(),
+            success: function (response) {
+                alert("funciona bien");
+            }
+//            ,
+//            error: function(error){
+//                alert("No funciona");
+//            }
+        });
+    });
+//    $('#bAdopcion').click(function(){
+//        var data = {
+//            nombre:"Raul",
+//            email:"correo@hotmail.com",
+//            telefono:"5555555",
+//            especiMascota:"Tortuga de Orejas Rojas",
+//            motivoCausa:"Se me complica continuar con los cuidados de mi tortuga..."
+//        };
+//        $.ajax({
+//            url : './FormularioAdopcion',
+//            data : data,
+//            method : 'post', //en este caso
+//            dataType : 'json',
+//            success : function(response){
+//                alert("funciona bien");
+//            }
+////            ,
+////            error: function(error){
+////                alert("No funciona");
+////            }
+//        });
+//    });
+
+    $('#bDenuncia').click(function () {
+        var data = {
+            nombre: "Raul"
+        };
+        $.ajax({
+            url: './Control',
+            data: data,
+            method: 'post', //en este caso
+            dataType: 'json',
+            success: function (response) {
+                alert("funciona bien");
+            },
+            error: function (error) {
+                alert("No funciona");
+            }
+        });
+    });
+
+
+
+</script>
