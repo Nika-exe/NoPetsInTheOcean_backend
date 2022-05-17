@@ -1,4 +1,4 @@
-package com.webapp.Hackathon.resources.clases;
+package com.mensajeria;
 
 import jakarta.json.Json;
 import jakarta.json.JsonObject;

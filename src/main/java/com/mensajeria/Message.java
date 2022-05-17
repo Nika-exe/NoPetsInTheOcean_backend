@@ -1,4 +1,4 @@
-package com.webapp.Hackathon.resources.clases;
+package com.mensajeria;
 
 public class Message {
     private String nombre;

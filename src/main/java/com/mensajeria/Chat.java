@@ -1,8 +1,4 @@
-package com.webapp.Hackathon.resources.chat;
-
-import com.webapp.Hackathon.resources.clases.DecoderMensaje;
-import com.webapp.Hackathon.resources.clases.EncoderMensaje;
-import com.webapp.Hackathon.resources.clases.Message;
+package com.mensajeria;
 
 import javax.websocket.*;
 import javax.websocket.server.ServerEndpoint;
